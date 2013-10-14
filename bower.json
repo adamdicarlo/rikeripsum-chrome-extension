@@ -1,8 +1,7 @@
 {
-  "name": "riker-ipsum",
+  "name": "rikeripsum-chrome-extension",
   "version": "0.0.1",
   "dependencies": {
-
   },
   "devDependencies": {}
 }
