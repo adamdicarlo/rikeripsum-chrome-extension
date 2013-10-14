@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Riker Ipsum</title>
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body ng-app="myApp" ng-csp>
+  <div id="main" ng-view></div>
+  <div id="footer">
+    <p>
+      Made by <a href="https://twitter.com/jessicaspacekat" target="_blank">@jessicaspacekat</a>
+      with love for <a href="http://en.wikipedia.org/wiki/William_Riker" target="_blank">Number One</a> &middot;
+      Kludged into Chrome by <a href="https://twitter.com/adamdicarlo" target="_blank">@adamdicarlo</a>
+    </p>
+    <p>
+      Galaxy background <a href="http://hubblesite.org/gallery/album/entire/pr2012010c/" target="_blank">Galaxy Cluster Abel</a>
+      from the Hubble telescope. Image credit:
+      <abbr title="National Aeronautics and Space Administration"><a href="http://www.nasa.gov/" target="_blank">NASA</a></abbr>,
+      <abbr title="European Space Agency"><a href="http://www.esa.int" target="_blank">ESA</a></abbr>,
+      <abbr title="Canada France Hawaii Telescope"><a href="http://www.cfht.hawaii.edu/" target="_blank">CFHT</a></abbr>,
+      <abbr title="Chandra X-ray Observatory"><a href="http://chandra.harvard.edu/" target="_blank">CXO</a></abbr>,
+      M.J. Jee (University of California, Davis), and A. Mahdavi (San Francisco State University).
+    </p>
+  </div>
+
+  <script src="lib/angular.min.js"></script>
+  <!-- build:js js/app.js -->
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

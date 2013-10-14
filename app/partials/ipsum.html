@@ -1,0 +1,17 @@
+<div class="header">
+  <h1 class="galaxy">RIKER IPSUM</h1>
+  <div class="buttons">
+    <button type="submit" class="btn" ng-click="lessIpsum()" ng-disabled="tooFew()">
+      <span class="icon-left">-</span>
+      less
+    </button>
+    <button type="submit" class="btn" ng-click="sendIpsum()">
+      send to page
+    </button>
+    <button type="submit" class="btn" ng-click="addIpsum()">
+      <span class="icon-right">+</span>
+      more
+    </button>
+  </div>
+</div>
+<div id="copy" ng-click="selectText('copy')" readonly="readonly">{{ ipsum | truncate:quoteCount | join }}</div>

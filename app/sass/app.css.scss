@@ -1,0 +1,147 @@
+@import url(http://fonts.googleapis.com/css?family=Krona+One);
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+
+// Colors
+$blueLight: #fff;
+$blue: #E1EFEF;
+$blueDark: #BFDDDC;
+$blueDarkest: #87A09F;
+$greyDark: #505456;
+$teal: #29abb9;
+
+body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', arial, serif;
+  width: 48.5em;
+}
+
+* { margin:0; padding:0; }
+
+#main {
+  margin: 0 1em;
+}
+
+
+#footer {
+  clear:both;
+  background-color: $blue;
+  padding: .5em 1em;
+  p {
+    font-size: .75em;
+    color: $blueDarkest;
+    text-align: center;
+    line-height: 1.5em;
+    &:first-of-type {
+      color: darken($blueDarkest, 10);
+    }
+    a {
+      color: $teal;
+    }
+  }
+}
+
+.header {
+  h1 {
+    font-family: 'Krona One', sans-serif;
+    /* fallback color */
+    color: $blueDarkest;
+    font-style: italic;
+    letter-spacing: -0.1em;
+    font-size: 6em;
+
+    &.galaxy {
+      /* Fill with galaxy art (in WebKit, only) */
+      /* overrides color with nothingness */
+      -webkit-text-fill-color: transparent;
+
+      /* remember non WebKit browsers will see all of this EXCEPT the text */
+      background: #000 url(/img/space-tile.jpg) repeat top center;
+
+      /* the magic */
+      -webkit-background-clip: text;
+    }
+  }
+}
+
+.buttons {
+  margin: 10px 0;
+  padding: 1px;
+  background-color: $blueDark;
+  @include border-radius(12px);
+  display: inline-block;
+  width: 100%;
+  &:after {
+    clear: both;
+  }
+  button {
+    // LESS button
+    &:first-child {
+      @include border-left-radius(10px);
+      padding-left: 20px;
+      padding-right: 30px;
+      text-align: right;
+      .icon-left {
+        float: left;
+        font-weight: bold;
+        font-size: 1.4em;
+      }
+    }
+    // MORE button
+    &:last-child {
+      @include border-right-radius(10px);
+      padding-right: 20px;
+      padding-left: 30px;
+      text-align: left;
+      .icon-right {
+        float: right;
+        font-weight: bold;
+        font-size: 1.4em;
+      }
+    }
+    // common button style
+    padding-top: .25em;
+    padding-bottom: .25em;
+    width: 33.3333333333%;
+    float:left;
+    margin: 0;
+    border-top: 1px solid $blueLight;
+    border-bottom: 1px solid $blueDark;
+    border-right: 1px solid $blueDark;
+    border-left: 1px solid $blueDark;
+    @include background-image(linear-gradient($blueLight, $blue 4%, $blue));
+    // button text
+    font-size: 1.3em;
+    line-height: 1.3em;
+    color: $blueDarkest;
+    @include text-shadow($blueDark 0 -1px 2px, $blueLight 0 1px 1px);
+    &:hover {
+      color: darken($blueDarkest,10);
+      cursor: pointer;
+    }
+    &:active {
+      cursor: pointer;
+      border-top: 1px solid $blueDark;
+      color: darken($blueDarkest,10);
+      @include background-image(linear-gradient(lighten($blue, 2%) 4%, lighten($blue, 2%)));
+    }
+    &:disabled {
+      @include opacity(.3);
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Contains the Ipsum result
+#copy {
+  padding: 5px;
+  margin: 1em 0;
+  cursor: crosshair;
+  background: transparent;
+  border: none;
+  color: $greyDark;
+  font-size: 1em;
+  line-height: 1.5em;
+}
